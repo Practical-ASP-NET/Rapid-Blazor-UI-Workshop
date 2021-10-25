@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using RapidBlazorUI.Client;
-using RapidBlazorUI.Client.Exercises._4_ProductList;
+using RapidBlazorUI.Client.Exercises._5_ProductList;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
