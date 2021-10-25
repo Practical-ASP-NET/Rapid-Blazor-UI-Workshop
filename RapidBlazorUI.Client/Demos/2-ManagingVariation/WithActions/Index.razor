@@ -1,0 +1,24 @@
+@page "/demo/variation/withactions"
+
+<div class="flex gap-4">
+    <Panel Title="Panel A">
+        <ChildContent>
+            A Panel
+        </ChildContent>
+        <Actions>
+            <a href="/" class="underline text-blue-500">View</a>
+        </Actions>
+    </Panel>
+    <ImportantPanel Title="Panel B">
+        <ChildContent>
+            This works but...
+        </ChildContent>
+        <Actions>
+            <span>Why no actions?</span>
+        </Actions>
+    </ImportantPanel>
+</div>
+
+@code {
+
+}

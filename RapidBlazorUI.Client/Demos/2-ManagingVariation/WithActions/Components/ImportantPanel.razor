@@ -1,4 +1,4 @@
-﻿<Panel Title="@Title" PrimaryBackgroundColor="bg-red-400">
+﻿<Panel Title="@Title" PrimaryBackgroundColor="bg-red-400" Actions="@Actions">
     @ChildContent
 </Panel>
 
@@ -9,5 +9,8 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    
+    [Parameter]
+    public RenderFragment Actions { get; set; }
 
 }
