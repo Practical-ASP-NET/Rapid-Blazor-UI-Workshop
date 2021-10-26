@@ -1,4 +1,6 @@
-﻿namespace RapidBlazorUI.Client.Exercises._5_ProductList
+﻿using System.Collections.Generic;
+
+namespace BlazorUIWorkshop.Exercises._5_ProductList
 {
     public class ProductApi
     {
