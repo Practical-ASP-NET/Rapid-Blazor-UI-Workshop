@@ -1,0 +1,31 @@
+﻿@page "/demo/products"
+
+@if (products != null)
+{
+    <div class="p-6 flex gap-4">
+        @foreach (var product in products)
+        {
+            // build product 'card' here!
+            <div class="flex flex-col border rounded-lg shadow">
+                <img src="@product.ImageUrl" class="flex-0 rounded-t-lg"/>
+                <div class="p-2 flex-1 flex flex-col">
+                    <p class="text-lg font-medium mb-2 text-gray-600">$@product.Price</p>
+                    <p class="text-gray-600">@product.Name</p>
+                    <p class="mt-2 text-center text-gray-500">FREE Delivery</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+
+    private List<ProductApi.Product> products;
+
+    protected override Task OnInitializedAsync()
+    {
+        products = new ProductApi().ListAll();
+        return base.OnInitializedAsync();
+    }
+
+}

@@ -1,0 +1,28 @@
+﻿<div class="w-52 h-52 flex flex-col rounded-t-md border border-gray-300">
+    <div class="@($"p-2  text-white rounded-t-md {PrimaryBackgroundColor}")">@Title</div>
+    <div class="p-2 flex-1">
+        @ChildContent
+    </div>
+    @if (Actions != null)
+    {
+        <div class="p-2 bg-gray-100 border-t border-gray-200">
+            @Actions
+        </div>
+    }
+</div>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string PrimaryBackgroundColor { get; set; } = "bg-purple-400";
+
+    [Parameter]
+    public RenderFragment Actions { get; set; }
+
+}

@@ -1,0 +1,50 @@
+@page "/demo/refit"
+@using RapidBlazorUI.Client.Infrastructure
+@inject IDonatelloApi Api
+@inject IJSRuntime JsRuntime
+
+<div class="p-2">
+
+    <EditForm Model="command" class="p-4" OnSubmit="HandleSubmit">
+        <label for="name" class="font-medium">Name</label>
+        <InputText id="name" @bind-Value="command.Name" class="p-2 border rounded"></InputText>
+        <button class="bg-blue-400 text-white p-2 rounded" type="submit">Submit</button>
+    </EditForm>
+
+    <ul>
+        @foreach (var board in boards ?? Enumerable.Empty<Board>())
+        {
+            <li>@board.Name</li>
+        }
+    </ul>
+
+</div>
+
+@code {
+
+    private IEnumerable<Board> boards;
+
+    private Command command = new Command();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadBoards();
+    }
+
+    private async Task LoadBoards()
+    {
+        boards = await Api.GetBoards();
+    }
+
+    private async Task HandleSubmit()
+    {
+        await Api.CreateBoard(new CreateBoardCommand { Name = command.Name });
+        await LoadBoards();
+    }
+
+    public class Command
+    {
+        public string Name { get; set; }
+    }
+
+}
