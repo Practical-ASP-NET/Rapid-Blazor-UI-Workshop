@@ -5,3 +5,11 @@
 #blazor-error-ui {
     display: none;
 }
+
+a {
+    @apply underline text-blue-600;
+}
+
+h3 {
+    @apply text-2xl mt-2 mb-3;
+}

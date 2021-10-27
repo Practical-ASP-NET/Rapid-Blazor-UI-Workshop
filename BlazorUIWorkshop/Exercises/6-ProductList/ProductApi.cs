@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BlazorUIWorkshop.Exercises._5_ProductList
+﻿namespace BlazorUIWorkshop.Exercises._6_ProductList
 {
     public class ProductApi
     {
@@ -10,12 +8,12 @@ namespace BlazorUIWorkshop.Exercises._5_ProductList
             {
                 new Product
                 {
-                    Name = "Men's large vest",
-                    Price = 12.39m,
+                    Name = "Men's large vest", 
+                    Price = 12.39m, 
                 },
                 new Product
                 {
-                    Name = "Men's Polo Shirt",
+                    Name = "Men's Polo Shirt", 
                     Price = 49.79m
                 },
                 new Product

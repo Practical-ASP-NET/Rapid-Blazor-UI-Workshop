@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Refit;
 
-namespace BlazorUIWorkshop.Exercises._6_Refit;
+namespace BlazorUIWorkshop.Exercises._7_Refit;
 
 public interface IDonatelloApi
 {
