@@ -1,0 +1,13 @@
+<Panel PrimaryBackgroundColour="bg-red-500" @attributes="ExtraAttributes">
+    @ChildContent
+</Panel>
+
+@code {
+    
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> ExtraAttributes { get; set; }
+    
+}

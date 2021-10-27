@@ -29,6 +29,10 @@
         <InputStylesheets Include="Styles\**\*.css" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Demos\FeatureFolders\Dashboard\Components" />
+    </ItemGroup>
+
     <Target Name="CheckForNpm" BeforeTargets="BuildCSS">
         <Message Text="Checking for NPM" Importance="high" />
         <Exec Command="npm -v" ContinueOnError="true">
